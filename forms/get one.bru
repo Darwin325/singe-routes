@@ -1,0 +1,15 @@
+meta {
+  name: get one
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{apiHost}}/v1/forms/:technician_id
+  body: formUrlEncoded
+  auth: inherit
+}
+
+params:path {
+  technician_id: 1
+}

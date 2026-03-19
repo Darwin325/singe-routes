@@ -1,0 +1,54 @@
+meta {
+  name: form versión
+  type: http
+  seq: 7
+}
+
+post {
+  url: {{apiHost}}/v1/forms/1/versions
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "description": "Versión 2 - Se agregó campo de amperaje",
+    "fields": [
+      {
+        "name": "temperatura_ambiente",
+        "label": "Temperatura ambiente (°C)",
+        "fieldType": "number",
+        "isRequired": true,
+        "displayOrder": 0
+      },
+      {
+        "name": "presion_refrigerante",
+        "label": "Presión del refrigerante (PSI)",
+        "fieldType": "number",
+        "isRequired": true,
+        "displayOrder": 1
+      },
+      {
+        "name": "amperaje",
+        "label": "Amperaje del compresor (A)",
+        "fieldType": "number",
+        "isRequired": true,
+        "displayOrder": 2
+      },
+      {
+        "name": "estado_general",
+        "label": "Estado general del equipo",
+        "fieldType": "select",
+        "isRequired": true,
+        "displayOrder": 3,
+        "options": [
+          {"label": "Excelente", "value": "excelente"},
+          {"label": "Bueno", "value": "bueno"},
+          {"label": "Regular", "value": "regular"},
+          {"label": "Malo", "value": "malo"}
+        ]
+      }
+    ]
+  }
+  
+}

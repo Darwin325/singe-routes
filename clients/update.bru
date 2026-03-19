@@ -1,0 +1,25 @@
+meta {
+  name: update
+  type: http
+  seq: 5
+}
+
+put {
+  url: {{apiHost}}/v1/clients/:id
+  body: formUrlEncoded
+  auth: inherit
+}
+
+params:path {
+  id: 1
+}
+
+body:form-urlencoded {
+  clientTypeId: 2
+  name: Client S.A.S
+  identifier: 234453
+  email: fdafa@mail.com
+  address: calle 34
+  phone: 321498560
+  status: true
+}

@@ -1,0 +1,15 @@
+meta {
+  name: get_forms
+  type: http
+  seq: 6
+}
+
+get {
+  url: {{apiHost}}/v1/forms?equipmentTypeId=1
+  body: none
+  auth: inherit
+}
+
+params:query {
+  equipmentTypeId: 1
+}

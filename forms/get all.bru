@@ -1,0 +1,23 @@
+meta {
+  name: get all
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{apiHost}}/v1/forms?search=aire
+  body: formUrlEncoded
+  auth: inherit
+}
+
+params:query {
+  search: aire
+  ~equipmentTypeId: 2
+  ~limit: 1
+  ~page: 2
+}
+
+docs {
+  Params:
+  - search => busa por nombre de formulario
+}

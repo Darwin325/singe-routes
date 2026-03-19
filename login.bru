@@ -1,0 +1,20 @@
+meta {
+  name: login
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{apiHost}}/v1/auth/login
+  body: formUrlEncoded
+  auth: inherit
+}
+
+body:form-urlencoded {
+  email: user@mail8.com
+  password: Pas123word12
+}
+
+vars:post-response {
+  api_token: res.body.data.token
+}

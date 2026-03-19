@@ -1,0 +1,21 @@
+meta {
+  name: equipments by client
+  type: http
+  seq: 6
+}
+
+get {
+  url: {{apiHost}}/v1/clients/:clientId/equipments
+  body: formUrlEncoded
+  auth: inherit
+}
+
+params:query {
+  ~search: 454346576
+  ~limit: 1
+  ~page: 2
+}
+
+params:path {
+  clientId: 1
+}

@@ -1,0 +1,22 @@
+meta {
+  name: add
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{apiHost}}/v1/technicians
+  body: formUrlEncoded
+  auth: inherit
+}
+
+body:form-urlencoded {
+  name: Camilo Perdomo 2
+  identifier: 23432
+  email: fdafa121@mail.com
+  address: calle 34
+  phone: 321498560
+  identifierType: Cédula
+  specialtyId: 1
+  employmentType: planta
+}

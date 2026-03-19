@@ -1,0 +1,41 @@
+meta {
+  name: add
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{apiHost}}/v1/form-responses
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "formId": 2,
+    "equipmentId": 1,
+    "technicianId": 1,
+    "values": [
+      {
+        "formFieldId": 10,
+        "value": "24"
+      },
+      {
+        "formFieldId": 11,
+        "value": "65"
+      },
+      {
+        "formFieldId": 12,
+        "value": "15.5"
+      },
+      {
+        "formFieldId": 13,
+        "value": "bueno"
+      },
+      {
+        "formFieldId": 14,
+        "value": "no"
+      }
+    ]
+  }
+}

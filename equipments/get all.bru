@@ -1,0 +1,29 @@
+meta {
+  name: get all
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{apiHost}}/v1/equipments?search=sam
+  body: formUrlEncoded
+  auth: inherit
+}
+
+params:query {
+  search: sam
+  ~clientId: 1
+  ~equipmentTypeId: 1
+  ~limit: 1
+  ~page: 2
+}
+
+body:form-urlencoded {
+  : 
+  : 
+}
+
+docs {
+  params:
+  - search: busca por número de serial, marca o modelo
+}

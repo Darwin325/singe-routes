@@ -1,0 +1,45 @@
+meta {
+  name: update
+  type: http
+  seq: 5
+}
+
+put {
+  url: {{apiHost}}/v1/form-responses/:id
+  body: json
+  auth: inherit
+}
+
+params:path {
+  id: 2
+}
+
+body:json {
+  {
+    "formId": 2,
+    "equipmentId": 1,
+    "technicianId": 1,
+    "values": [
+      {
+        "formFieldId": 10,
+        "value": "24"
+      },
+      {
+        "formFieldId": 11,
+        "value": "65"
+      },
+      {
+        "formFieldId": 12,
+        "value": "15.5"
+      },
+      {
+        "formFieldId": 13,
+        "value": "malo"
+      },
+      {
+        "formFieldId": 14,
+        "value": "no"
+      }
+    ]
+  }
+}

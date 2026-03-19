@@ -1,0 +1,20 @@
+meta {
+  name: update
+  type: http
+  seq: 5
+}
+
+post {
+  url: {{apiHost}}/v1/selects/:id
+  body: formUrlEncoded
+  auth: inherit
+}
+
+params:path {
+  id: 1
+}
+
+body:form-urlencoded {
+  name: Camilo Perdomo
+  type: speciality
+}

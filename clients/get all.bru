@@ -1,0 +1,17 @@
+meta {
+  name: get all
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{apiHost}}/v1/clients
+  body: formUrlEncoded
+  auth: inherit
+}
+
+params:query {
+  ~search: 454346576
+  ~limit: 1
+  ~page: 2
+}

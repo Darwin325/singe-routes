@@ -1,0 +1,31 @@
+meta {
+  name: register
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{apiHost}}/v1/auth/signup
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "name": "Darwin Zamora",
+    "email": "user@mail8.com",
+    "username": "user03",
+    "password": "Pas123word12",
+    "passwordConfirmation": "Pas123word12"
+  }
+}
+
+body:form-urlencoded {
+  email: 
+  username: 
+  password: 
+}
+
+body:multipart-form {
+  : 
+}

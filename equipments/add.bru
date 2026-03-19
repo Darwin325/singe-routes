@@ -1,0 +1,18 @@
+meta {
+  name: add
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{apiHost}}/v1/equipments
+  body: formUrlEncoded
+  auth: inherit
+}
+
+body:form-urlencoded {
+  clientId: 1
+  equipmentTypeId: 1
+  serialNumber: 16516
+  brand: Samsung
+}

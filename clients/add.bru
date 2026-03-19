@@ -1,0 +1,20 @@
+meta {
+  name: add
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{apiHost}}/v1/clients
+  body: formUrlEncoded
+  auth: inherit
+}
+
+body:form-urlencoded {
+  clientTypeId: 1
+  name: Client S.A.S 2
+  identifier: 454346576
+  email: fdafa@mail.com
+  address: calle 34
+  phone: 321498560
+}
