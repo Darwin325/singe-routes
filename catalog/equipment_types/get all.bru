@@ -5,12 +5,14 @@ meta {
 }
 
 get {
-  url: {{apiHost}}/v1/selects
+  url: {{apiHost}}/v1/equipment-types
   body: formUrlEncoded
   auth: inherit
 }
 
 params:query {
+  ~search: Bomba
+  ~isActive: true
   ~limit: 1
   ~page: 2
 }

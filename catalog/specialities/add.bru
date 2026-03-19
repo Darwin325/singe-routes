@@ -1,0 +1,16 @@
+meta {
+  name: add
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{apiHost}}/v1/equipment-types
+  body: formUrlEncoded
+  auth: inherit
+}
+
+body:form-urlencoded {
+  name: Aires acondicionados
+  description: Es de los mejores aires
+}

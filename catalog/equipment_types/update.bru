@@ -1,0 +1,21 @@
+meta {
+  name: update
+  type: http
+  seq: 5
+}
+
+put {
+  url: {{apiHost}}/v1/equipment-types/:id
+  body: formUrlEncoded
+  auth: inherit
+}
+
+params:path {
+  id: 3
+}
+
+body:form-urlencoded {
+  name: Natural 2
+  description: Desc del cliente natural
+  isActive: false
+}

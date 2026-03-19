@@ -4,17 +4,18 @@ meta {
   seq: 5
 }
 
-post {
-  url: {{apiHost}}/v1/selects/:id
+put {
+  url: {{apiHost}}/v1/client-types/:id
   body: formUrlEncoded
   auth: inherit
 }
 
 params:path {
-  id: 1
+  id: 3
 }
 
 body:form-urlencoded {
-  name: Camilo Perdomo
-  type: speciality
+  name: Natural 2
+  description: Desc del cliente natural
+  isActive: false
 }

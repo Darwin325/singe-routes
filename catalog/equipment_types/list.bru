@@ -1,0 +1,11 @@
+meta {
+  name: list
+  type: http
+  seq: 6
+}
+
+get {
+  url: {{apiHost}}/v1/equipment-types-list
+  body: formUrlEncoded
+  auth: inherit
+}
