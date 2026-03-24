@@ -1,0 +1,16 @@
+meta {
+  name: add
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{apiHost}}/v1/relationship-types
+  body: formUrlEncoded
+  auth: inherit
+}
+
+body:form-urlencoded {
+  name: Profesional
+  description: Des, tipo de vinculación
+}
