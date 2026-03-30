@@ -1,20 +1,17 @@
 meta {
-  name: get_responses
+  name: get all
   type: http
-  seq: 5
+  seq: 2
 }
 
 get {
-  url: {{apiHost}}/v1/forms/:formId/responses
+  url: {{apiHost}}/v1/users
   body: formUrlEncoded
   auth: inherit
 }
 
 params:query {
+  ~search: 454346576
   ~limit: 1
   ~page: 2
-}
-
-params:path {
-  formId: 2
 }

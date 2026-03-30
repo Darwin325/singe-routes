@@ -1,0 +1,20 @@
+meta {
+  name: add
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{apiHost}}/v1/users
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "name": "Juan Pérez",
+    "email": "juan@empresa.com",
+    "password": "12345678",
+    "status": true
+  }
+}

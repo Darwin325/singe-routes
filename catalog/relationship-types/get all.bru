@@ -5,13 +5,13 @@ meta {
 }
 
 get {
-  url: {{apiHost}}/v1/relationship-types?isActive=false
+  url: {{apiHost}}/v1/relationship-types
   body: formUrlEncoded
   auth: inherit
 }
 
 params:query {
-  isActive: false
+  ~isActive: false
   ~search: Bomba
   ~limit: 1
   ~page: 2

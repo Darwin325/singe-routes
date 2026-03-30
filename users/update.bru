@@ -1,0 +1,24 @@
+meta {
+  name: update
+  type: http
+  seq: 5
+}
+
+put {
+  url: {{apiHost}}/v1/users/:id
+  body: json
+  auth: inherit
+}
+
+params:path {
+  id: 580
+}
+
+body:json {
+  {
+    "name": "Juan Pérez",
+    "password": "12345678",
+    "status": false
+  }
+  
+}

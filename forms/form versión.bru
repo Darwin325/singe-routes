@@ -1,51 +1,57 @@
 meta {
   name: form versión
   type: http
-  seq: 7
+  seq: 6
 }
 
 post {
-  url: {{apiHost}}/v1/forms/1/versions
+  url: {{apiHost}}/v1/forms/:id/versions
   body: json
   auth: inherit
 }
 
+params:path {
+  id: 288
+}
+
 body:json {
   {
-    "description": "Versión 2 - Se agregó campo de amperaje",
-    "fields": [
+    "description": "Segunda versión con secciones actualizadas",
+    "sections": [
       {
-        "name": "temperatura_ambiente",
-        "label": "Temperatura ambiente (°C)",
-        "fieldType": "number",
-        "isRequired": true,
-        "displayOrder": 0
+        "name": "Datos del Equipo",
+        "subtitle": "Información técnica",
+        "displayOrder": 0,
+        "fields": [
+          {
+            "name": "serial",
+            "label": "Número de serie",
+            "fieldType": "text",
+            "isRequired": true
+          },
+          {
+            "name": "modelo",
+            "label": "Modelo",
+            "fieldType": "text"
+          }
+        ]
       },
       {
-        "name": "presion_refrigerante",
-        "label": "Presión del refrigerante (PSI)",
-        "fieldType": "number",
-        "isRequired": true,
-        "displayOrder": 1
-      },
-      {
-        "name": "amperaje",
-        "label": "Amperaje del compresor (A)",
-        "fieldType": "number",
-        "isRequired": true,
-        "displayOrder": 2
-      },
-      {
-        "name": "estado_general",
-        "label": "Estado general del equipo",
-        "fieldType": "select",
-        "isRequired": true,
-        "displayOrder": 3,
-        "options": [
-          {"label": "Excelente", "value": "excelente"},
-          {"label": "Bueno", "value": "bueno"},
-          {"label": "Regular", "value": "regular"},
-          {"label": "Malo", "value": "malo"}
+        "name": "Evaluación",
+        "subtitle": "Estado del equipo",
+        "displayOrder": 1,
+        "fields": [
+          {
+            "name": "estado",
+            "label": "Estado general",
+            "fieldType": "select",
+            "isRequired": true,
+            "options": [
+              { "label": "Excelente", "value": "excelente" },
+              { "label": "Bueno", "value": "bueno" },
+              { "label": "Regular", "value": "regular" }
+            ]
+          }
         ]
       }
     ]

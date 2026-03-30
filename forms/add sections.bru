@@ -1,0 +1,234 @@
+meta {
+  name: add sections
+  type: http
+  seq: 7
+}
+
+post {
+  url: {{apiHost}}/v1/forms
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "name": "Inspección de Aire Acondicionado 41",
+    "equipmentTypeId": 1,
+    "description": "Formulario completo de inspección para equipos de aire acondicionado",
+    "isActive": true,
+    "sections": [
+      {
+        "name": "Información General",
+        "subtitle": "Datos básicos del equipo y ubicación",
+        "displayOrder": 0,
+        "fields": [
+          {
+            "name": "fecha_inspeccion",
+            "label": "Fecha de inspección",
+            "fieldType": "date",
+            "isRequired": true,
+            "displayOrder": 0
+          },
+          {
+            "name": "ubicacion",
+            "label": "Ubicación del equipo",
+            "fieldType": "text",
+            "isRequired": true,
+            "displayOrder": 1,
+            "properties": {
+              "placeholder": "Ej: Oficina 205, Piso 2"
+            }
+          },
+          {
+            "name": "responsable",
+            "label": "Responsable del área",
+            "fieldType": "text",
+            "isRequired": false,
+            "displayOrder": 2
+          }
+        ]
+      },
+      {
+        "name": "Estado del Equipo",
+        "subtitle": "Evaluación del estado físico y funcional",
+        "displayOrder": 1,
+        "fields": [
+          {
+            "name": "estado_general",
+            "label": "Estado general del equipo",
+            "fieldType": "select",
+            "isRequired": true,
+            "displayOrder": 0,
+            "options": [
+              {
+                "label": "Excelente",
+                "value": "excelente",
+                "displayOrder": 0
+              },
+              {
+                "label": "Bueno",
+                "value": "bueno",
+                "displayOrder": 1
+              },
+              {
+                "label": "Regular",
+                "value": "regular",
+                "displayOrder": 2
+              },
+              {
+                "label": "Malo",
+                "value": "malo",
+                "displayOrder": 3
+              }
+            ]
+          },
+          {
+            "name": "limpieza_filtros",
+            "label": "¿Filtros limpios?",
+            "fieldType": "radio",
+            "isRequired": true,
+            "displayOrder": 1,
+            "options": [
+              {
+                "label": "Sí",
+                "value": "si",
+                "displayOrder": 0
+              },
+              {
+                "label": "No",
+                "value": "no",
+                "displayOrder": 1
+              },
+              {
+                "label": "Parcialmente",
+                "value": "parcial",
+                "displayOrder": 2
+              }
+            ]
+          },
+          {
+            "name": "temperatura_medida",
+            "label": "Temperatura medida (°C)",
+            "fieldType": "number",
+            "isRequired": false,
+            "displayOrder": 2,
+            "properties": {
+              "min": -10,
+              "max": 50,
+              "step": 0.5
+            }
+          }
+        ]
+      },
+      {
+        "name": "Mantenimiento Realizado",
+        "subtitle": "Tareas ejecutadas durante la inspección",
+        "displayOrder": 2,
+        "fields": [
+          {
+            "name": "tareas_realizadas",
+            "label": "Tareas realizadas",
+            "fieldType": "checkbox",
+            "isRequired": false,
+            "displayOrder": 0,
+            "options": [
+              {
+                "label": "Limpieza de filtros",
+                "value": "limpieza_filtros",
+                "displayOrder": 0
+              },
+              {
+                "label": "Revisión de gas refrigerante",
+                "value": "revision_gas",
+                "displayOrder": 1
+              },
+              {
+                "label": "Lubricación de componentes",
+                "value": "lubricacion",
+                "displayOrder": 2
+              },
+              {
+                "label": "Revisión eléctrica",
+                "value": "revision_electrica",
+                "displayOrder": 3
+              },
+              {
+                "label": "Limpieza de condensador",
+                "value": "limpieza_condensador",
+                "displayOrder": 4
+              }
+            ]
+          },
+          {
+            "name": "observaciones",
+            "label": "Observaciones y recomendaciones",
+            "fieldType": "textarea",
+            "isRequired": false,
+            "displayOrder": 1,
+            "properties": {
+              "rows": 5,
+              "maxLength": 1000,
+              "placeholder": "Describa cualquier anomalía encontrada o recomendación"
+            }
+          },
+          {
+            "name": "foto_evidencia",
+            "label": "Fotografía de evidencia",
+            "fieldType": "file",
+            "isRequired": false,
+            "displayOrder": 2,
+            "properties": {
+              "accept": "image/*",
+              "maxSize": 5242880
+            }
+          }
+        ]
+      },
+      {
+        "name": "Próximo Mantenimiento",
+        "subtitle": "Programación y seguimiento",
+        "displayOrder": 3,
+        "fields": [
+          {
+            "name": "requiere_seguimiento",
+            "label": "¿Requiere seguimiento?",
+            "fieldType": "radio",
+            "isRequired": true,
+            "displayOrder": 0,
+            "options": [
+              {
+                "label": "Sí",
+                "value": "si",
+                "displayOrder": 0
+              },
+              {
+                "label": "No",
+                "value": "no",
+                "displayOrder": 1
+              }
+            ]
+          },
+          {
+            "name": "fecha_proximo_mantenimiento",
+            "label": "Fecha sugerida para próximo mantenimiento",
+            "fieldType": "date",
+            "isRequired": false,
+            "displayOrder": 1
+          },
+          {
+            "name": "notas_adicionales",
+            "label": "Notas adicionales",
+            "fieldType": "textarea",
+            "isRequired": false,
+            "displayOrder": 2,
+            "properties": {
+              "rows": 3,
+              "maxLength": 500
+            }
+          }
+        ]
+      }
+    ]
+  }
+  
+}
