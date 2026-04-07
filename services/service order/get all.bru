@@ -1,0 +1,18 @@
+meta {
+  name: get all
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{apiHost}}/v1/service-orders
+  body: formUrlEncoded
+  auth: inherit
+}
+
+params:query {
+  ~search: Mantenimiento
+  ~isActive: true
+  ~limit: 1
+  ~page: 2
+}

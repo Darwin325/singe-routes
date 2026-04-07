@@ -1,0 +1,18 @@
+meta {
+  name: add
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{apiHost}}/v1/service-orders
+  body: formUrlEncoded
+  auth: inherit
+}
+
+body:form-urlencoded {
+  description: Orden para mantenimientos programados
+  clientId: 1
+  serviceTypeId: 1
+  address: calle 23
+}

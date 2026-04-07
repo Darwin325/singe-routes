@@ -1,0 +1,19 @@
+meta {
+  name: update
+  type: http
+  seq: 5
+}
+
+put {
+  url: {{apiHost}}/v1/service-orders/:id
+  body: formUrlEncoded
+  auth: inherit
+}
+
+params:path {
+  id: 1
+}
+
+body:form-urlencoded {
+  isActive: false
+}

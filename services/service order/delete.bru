@@ -1,0 +1,15 @@
+meta {
+  name: delete
+  type: http
+  seq: 4
+}
+
+delete {
+  url: {{apiHost}}/v1/service-orders/:id
+  body: formUrlEncoded
+  auth: inherit
+}
+
+params:path {
+  id: 2
+}
