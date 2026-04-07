@@ -1,11 +1,11 @@
 meta {
-  name: get one
+  name: current status
   type: http
-  seq: 3
+  seq: 9
 }
 
 get {
-  url: {{apiHost}}/v1/service-orders/:id
+  url: {{apiHost}}/v1/service-orders/:id/current-status
   body: formUrlEncoded
   auth: inherit
 }

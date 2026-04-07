@@ -5,13 +5,13 @@ meta {
 }
 
 get {
-  url: {{apiHost}}/v1/service-order-statuses?search=Pendiente
+  url: {{apiHost}}/v1/service-order-statuses
   body: formUrlEncoded
   auth: inherit
 }
 
 params:query {
-  search: Pendiente
+  ~search: Pendiente
   ~isActive: true
   ~limit: 1
   ~page: 2

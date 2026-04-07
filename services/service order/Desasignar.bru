@@ -1,0 +1,15 @@
+meta {
+  name: Desasignar
+  type: http
+  seq: 11
+}
+
+delete {
+  url: {{apiHost}}/v1/service-order-status-assignments/:status_id
+  body: formUrlEncoded
+  auth: inherit
+}
+
+params:path {
+  status_id: 4
+}
