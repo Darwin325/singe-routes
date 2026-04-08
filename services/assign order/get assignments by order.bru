@@ -1,0 +1,23 @@
+meta {
+  name: get assignments by order
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{apiHost}}/v1/service-order-technician-assignments/:serviceOrderId
+  body: json
+  auth: inherit
+}
+
+params:query {
+  ~serviceDate: 2026-12-15
+  ~technicianId: 1
+  ~createdAt: 2026-04-08
+  ~limit: 4
+  ~page: 1
+}
+
+params:path {
+  serviceOrderId: 53
+}

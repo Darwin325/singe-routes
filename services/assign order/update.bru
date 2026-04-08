@@ -1,0 +1,30 @@
+meta {
+  name: update
+  type: http
+  seq: 4
+}
+
+put {
+  url: {{apiHost}}/v1/service-order-technician-assignments/:serviceOrderId
+  body: json
+  auth: inherit
+}
+
+params:path {
+  serviceOrderId: 53
+}
+
+body:json {
+  {
+    "serviceOrderId": 53,
+    "serviceDate": "2026-12-15",
+    "serviceTime": "10:00",
+    "observation": "Mantenimiento preventivo programado",
+    "isActive": true,
+    "technicians": [
+      { "technicianId": 382, "isResponsible": true },
+      { "technicianId": 383, "isResponsible": false },
+      { "technicianId": 1, "isResponsible": false }
+    ]
+  }
+}

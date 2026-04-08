@@ -1,0 +1,15 @@
+meta {
+  name: technicians by order
+  type: http
+  seq: 6
+}
+
+get {
+  url: {{apiHost}}/v1/service-orders/:serviceOrderId/technicians
+  body: json
+  auth: inherit
+}
+
+params:path {
+  serviceOrderId: 53
+}

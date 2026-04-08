@@ -1,0 +1,15 @@
+meta {
+  name: delete
+  type: http
+  seq: 5
+}
+
+delete {
+  url: {{apiHost}}/v1/service-order-technician-assignments/:serviceOrderId
+  body: json
+  auth: inherit
+}
+
+params:path {
+  serviceOrderId: 53
+}
