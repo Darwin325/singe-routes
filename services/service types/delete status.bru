@@ -1,0 +1,19 @@
+meta {
+  name: delete status
+  type: http
+  seq: 10
+}
+
+delete {
+  url: {{apiHost}}/v1/service-type-status-assignments/:statusId
+  body: formUrlEncoded
+  auth: inherit
+}
+
+params:path {
+  statusId: 
+}
+
+docs {
+  ### Eliminar un estado asignado a un tipo de servicio. Se pasa como parámetro el id de la asignación de un estado. Se listan los estados en la url: `{{apiHost}}/v1/service-types/:serviceTypeId/statuses`
+}

@@ -1,0 +1,19 @@
+meta {
+  name: current status
+  type: http
+  seq: 8
+}
+
+get {
+  url: {{apiHost}}/v1/service-types/:serviceTypeId/current-status
+  body: formUrlEncoded
+  auth: inherit
+}
+
+params:path {
+  serviceTypeId: 1
+}
+
+docs {
+  ## Obtine el estado actual (estado en el que se encuentra un tipo de servicio)
+}
