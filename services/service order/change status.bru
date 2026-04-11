@@ -1,0 +1,18 @@
+meta {
+  name: change status
+  type: http
+  seq: 8
+}
+
+post {
+  url: {{apiHost}}/v1/service-order-status/change
+  body: json
+  auth: inherit
+}
+
+body:json {
+  { 
+    "serviceOrderId": 853, 
+    "toStatusId": 23
+  }
+}
