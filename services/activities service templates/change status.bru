@@ -1,0 +1,19 @@
+meta {
+  name: change status
+  type: http
+  seq: 7
+}
+
+post {
+  url: {{apiHost}}/v1/service-order-activities/:id/status
+  body: formUrlEncoded
+  auth: inherit
+}
+
+params:path {
+  id: 2
+}
+
+body:form-urlencoded {
+  toStatusId: 1
+}

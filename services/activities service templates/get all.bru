@@ -1,0 +1,17 @@
+meta {
+  name: get all
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{apiHost}}/v1/service-template-activities
+  body: formUrlEncoded
+  auth: inherit
+}
+
+params:query {
+  ~search: Lim
+  ~limit: 1
+  ~page: 2
+}

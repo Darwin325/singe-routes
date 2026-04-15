@@ -5,15 +5,15 @@ meta {
 }
 
 get {
-  url: {{apiHost}}/v1/service-order-technician-assignments?serviceDate=2026-12-15&technicianId=1&createdAt=2026-04-08&limit=4&page=1
+  url: {{apiHost}}/v1/service-order-technician-assignments?limit=4&page=1
   body: json
   auth: inherit
 }
 
 params:query {
-  serviceDate: 2026-12-15
-  technicianId: 1
-  createdAt: 2026-04-08
   limit: 4
   page: 1
+  ~serviceDate: 2026-12-15
+  ~technicianId: 1
+  ~createdAt: 2026-04-08
 }

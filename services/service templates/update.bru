@@ -5,17 +5,15 @@ meta {
 }
 
 put {
-  url: {{apiHost}}/v1/client-types/:id
+  url: {{apiHost}}/v1/service-templates/:id
   body: formUrlEncoded
   auth: inherit
 }
 
 params:path {
-  id: 1022
+  id: 46
 }
 
 body:form-urlencoded {
   isActive: true
-  ~name: Natural
-  ~description: Desc del cliente natural
 }

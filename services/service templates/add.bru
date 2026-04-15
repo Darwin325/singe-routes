@@ -5,14 +5,12 @@ meta {
 }
 
 post {
-  url: {{apiHost}}/v1/equipments
+  url: {{apiHost}}/v1/service-templates
   body: formUrlEncoded
   auth: inherit
 }
 
 body:form-urlencoded {
-  clientId: 921
-  equipmentTypeId: 529
-  serialNumber: 16516
-  brand: Samsung
+  name: Plantilla de servicio 01
+  serviceTypeId: 1
 }
