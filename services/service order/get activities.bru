@@ -1,0 +1,22 @@
+meta {
+  name: get activities
+  type: http
+  seq: 7
+}
+
+get {
+  url: {{apiHost}}/v1/service-orders/:orderId/activities
+  body: formUrlEncoded
+  auth: inherit
+}
+
+params:query {
+  ~search: Mantenimiento
+  ~isActive: true
+  ~limit: 1
+  ~page: 2
+}
+
+params:path {
+  orderId: 94
+}

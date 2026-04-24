@@ -1,0 +1,22 @@
+meta {
+  name: orders by technician
+  type: http
+  seq: 7
+}
+
+get {
+  url: {{apiHost}}/v1/service-order-technician/:technicianId/orders
+  body: json
+  auth: inherit
+}
+
+params:query {
+  ~isActive: true
+  ~limit: 4
+  ~page: 1
+  ~serviceDate: 2026-12-15
+}
+
+params:path {
+  technicianId: 2
+}
