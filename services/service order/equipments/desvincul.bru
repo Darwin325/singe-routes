@@ -1,0 +1,16 @@
+meta {
+  name: desvincul
+  type: http
+  seq: 3
+}
+
+delete {
+  url: {{apiHost}}/v1/service-orders/:order_id/equipments/:equipmentId
+  body: none
+  auth: inherit
+}
+
+params:path {
+  order_id: 1
+  equipmentId: 1
+}

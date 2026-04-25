@@ -1,0 +1,22 @@
+meta {
+  name: add quipments
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{apiHost}}/v1/service-orders/:order_id/equipments
+  body: json
+  auth: inherit
+}
+
+params:path {
+  order_id: 2
+}
+
+body:json {
+  {
+    "equipmentIds": [5],
+    "observation": "Observación"
+  }
+}

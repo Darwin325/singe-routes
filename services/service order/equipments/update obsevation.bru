@@ -1,0 +1,22 @@
+meta {
+  name: update obsevation
+  type: http
+  seq: 4
+}
+
+put {
+  url: {{apiHost}}/v1/service-orders/:order_id/equipments/:equipmentId
+  body: json
+  auth: inherit
+}
+
+params:path {
+  order_id: 
+  equipmentId: 
+}
+
+body:json {
+  {
+    "observation": "Observación edited"
+  }
+}
