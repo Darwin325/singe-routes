@@ -5,11 +5,11 @@ meta {
 }
 
 get {
-  url: {{apiHost}}/v1/equipments/:technician_id
+  url: {{apiHost}}/v1/equipments/:id
   body: formUrlEncoded
   auth: inherit
 }
 
 params:path {
-  technician_id: 1
+  id: 1
 }

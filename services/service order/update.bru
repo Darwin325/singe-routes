@@ -11,11 +11,13 @@ put {
 }
 
 params:path {
-  id: 533
+  id: 5
 }
 
 body:json {
   {
-    "location": {"init_lat": "12.238.21", "end_lat": "652.000.22"}
+    "location": {"init_lat": "12.238.21", "end_lat": "652.000.22"},
+    "hasLocation": true, // or false
+    "orderStatus": "pending"
   }
 }
