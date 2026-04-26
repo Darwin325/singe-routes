@@ -6,14 +6,16 @@ meta {
 
 put {
   url: {{apiHost}}/v1/service-orders/:id
-  body: formUrlEncoded
+  body: json
   auth: inherit
 }
 
 params:path {
-  id: 1
+  id: 533
 }
 
-body:form-urlencoded {
-  isActive: false
+body:json {
+  {
+    "location": {"init_lat": "12.238.21", "end_lat": "652.000.22"}
+  }
 }

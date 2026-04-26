@@ -5,14 +5,14 @@ meta {
 }
 
 get {
-  url: {{apiHost}}/v1/equipments?search=sam
+  url: {{apiHost}}/v1/equipments?clientId=1
   body: formUrlEncoded
   auth: inherit
 }
 
 params:query {
-  search: sam
-  ~clientId: 1
+  clientId: 1
+  ~search: sam
   ~equipmentTypeId: 1
   ~limit: 1
   ~page: 2
