@@ -1,15 +1,15 @@
 meta {
   name: get one
   type: http
-  seq: 4
+  seq: 3
 }
 
 get {
-  url: {{apiHost}}/v1/clients/:id
-  body: formUrlEncoded
+  url: {{apiHost}}/v1/client-addresses/:id
+  body: json
   auth: inherit
 }
 
 params:path {
-  id: 211
+  id: 330
 }

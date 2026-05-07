@@ -1,16 +1,17 @@
 meta {
   name: get all
   type: http
-  seq: 3
+  seq: 2
 }
 
 get {
-  url: {{apiHost}}/v1/client-addresses?page=1&limit=10
+  url: {{apiHost}}/v1/client-addresses?clientId=211&page=1
   body: json
   auth: inherit
 }
 
 params:query {
+  clientId: 211
   page: 1
-  limit: 10
+  ~limit: 10
 }

@@ -1,0 +1,26 @@
+meta {
+  name: update
+  type: http
+  seq: 5
+}
+
+put {
+  url: {{apiHost}}/v1/client-addresses/:id
+  body: json
+  auth: inherit
+}
+
+params:path {
+  id: 330
+}
+
+body:json {
+  {
+    "clientId": 211,
+    "cityId": 1136,
+    "zoneType": "urban",
+    "areaName": "Barrio o vereda 02",
+    "address": "Calle 02",
+    "isPrimary": true
+  }
+}
