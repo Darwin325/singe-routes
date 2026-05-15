@@ -1,0 +1,21 @@
+meta {
+  name: sync
+  type: http
+  seq: 3
+}
+
+put {
+  url: {{apiHost}}/v1/users/:user_id/roles/sync
+  body: json
+  auth: inherit
+}
+
+params:path {
+  user_id: 6
+}
+
+body:json {
+  {
+    "role_ids": [1,2]
+  }
+}

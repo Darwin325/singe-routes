@@ -1,0 +1,15 @@
+meta {
+  name: show roles
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{apiHost}}/v1/users/:user_id/roles
+  body: none
+  auth: inherit
+}
+
+params:path {
+  user_id: 6
+}
