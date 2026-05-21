@@ -1,0 +1,15 @@
+meta {
+  name: show permissions by rol
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{apiHost}}/v1/permissions/:role_id
+  body: none
+  auth: inherit
+}
+
+params:path {
+  role_id: 3
+}
