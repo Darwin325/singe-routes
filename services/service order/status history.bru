@@ -1,0 +1,15 @@
+meta {
+  name: status history
+  type: http
+  seq: 10
+}
+
+get {
+  url: {{apiHost}}/v1/service-orders/:serviceOrderId/status-history
+  body: formUrlEncoded
+  auth: inherit
+}
+
+params:path {
+  serviceOrderId: a13ae01a-ead4-4042-8660-7b2167883eeb
+}

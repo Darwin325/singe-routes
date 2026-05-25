@@ -1,0 +1,18 @@
+meta {
+  name: chage status
+  type: http
+  seq: 8
+}
+
+post {
+  url: {{apiHost}}/v1/service-order-status/change
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "serviceOrderId": "c91ed97a-01e9-43c8-8020-52d47e83e53e",
+    "toStatusId": "ec799719-5a4b-4594-be6d-a855d05dbf06"
+  }
+}
