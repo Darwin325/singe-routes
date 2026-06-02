@@ -1,0 +1,45 @@
+meta {
+  name: sync
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{apiHost}}/v1/sync
+  body: multipartForm
+  auth: inherit
+}
+
+body:json {
+  {
+    "payload": {
+        "clientEquipmentId": "53f07668-a422-4756-8188-50d2b1cb16d1",
+        "formResponseId": "ecee896b-6317-4ecb-9cdc-c34587f274f7",
+        "orderEquipmentId": "9f972e73-9747-4c44-be95-1712a07ed0f6",
+        "clientId": "0bef97c9-19c3-4e73-8da1-84ad9fd1c1a0",
+        "equipmentTypeId": "cc96e921-0a61-44e6-b4e5-d9dec980902b",
+        "name": "Aire 1", "code": "S-1",
+        "serviceOrderId": "c185cfc9-3390-4951-a330-2dfe9c865870",
+        "formVersionId": "613e5da3-cab5-4878-89e5-b0c74f7be0ed",
+        "answers": [
+          { "formFieldId": "c3e0de13-d77e-4379-8b2a-0b481aae7de8", "value": "Bueno" },// falta formResponseValueId
+          { "formFieldId": "3368ed5c-29e7-49e9-8348-7dfd00c1d237", "value": "Sin afectaciones " }
+        ],
+        "activities": [
+          { "id": "e4809ec6-86b4-46d4-9b56-0c742db8b3c9", "templateActivityId": "d016e815-6f2a-4e18-991b-c340856120c2" },
+          { "id": "4753c96d-da34-46c0-ac76-8973d8d036b4", "templateActivityId": "63f2624b-10dd-4cc5-b946-95efc1ec719b" }
+         // { "id": "d7becfab-17ad-42b0-8ef4-0b36e759bd7a", "templateActivityId": "54a9cf2c-a301-4af6-a92f-e775dca70f61" }
+        ]
+      },
+    "eventType": "EQUIPMENT_REGISTERED",
+     "sycnedAt": "2026-01-06"
+  }
+}
+
+body:multipart-form {
+  payload[assets][0][file]: @file(C:\Users\darwi\Downloads\grano_0_3.jpg)
+  sycnedAt: 2026-06-01
+  eventType: ACTIVITY_ASSETS
+  payload[assets][0][assetType]: evidence
+  payload[assets][0][fileName]: mifile
+}
