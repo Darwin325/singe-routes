@@ -1,0 +1,15 @@
+meta {
+  name: datail
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{apiHost}}/v1/service-orders/:order_equipment/equipments
+  body: none
+  auth: inherit
+}
+
+params:path {
+  order_equipment: e9af4e9e-81ae-45d7-89ca-492e1ee9f37d
+}
