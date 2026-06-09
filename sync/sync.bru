@@ -12,8 +12,11 @@ post {
 
 body:json {
   {
-    "payload": {"serviceOrderId":"8a8f4857-4624-4a51-8ab3-0654a13330b2","currentStatusId":"211234f2-2a6c-4210-a358-7cc1092ff29b","initialDate":"2026-06-03T20:08:17.263Z","location":{"end":{"latitude":"2.8876252","longitude":"-75.4317668"}}},
-    "eventType": "UPDATE_SERVICE_ORDER"
+    "payload":  {
+              "assetId": "d0c27e09-858d-4c23-b9e8-b775e03db2bb"
+              //deletedAt: new Date().toISOString(),
+            },
+    "eventType": "ACTIVITY_ASSET_DELETED"
   }
 }
 

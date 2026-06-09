@@ -1,0 +1,15 @@
+meta {
+  name: observations
+  type: http
+  seq: 11
+}
+
+get {
+  url: {{apiHost}}/v1/service-orders/:id/observations
+  body: formUrlEncoded
+  auth: inherit
+}
+
+params:path {
+  id: 67f8a50d-5cac-4b6e-916d-fda6ddae27d0
+}
