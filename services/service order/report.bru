@@ -5,11 +5,12 @@ meta {
 }
 
 get {
-  url: {{apiHost}}/v1/service-orders/:serviceOrderId/report
+  url: {{apiHost}}/v1/service-orders/:serviceOrderId/report/:order_equipmnet
   body: formUrlEncoded
   auth: inherit
 }
 
 params:path {
-  serviceOrderId: ace616db-3ab3-46b7-8779-c3e700562cb7
+  order_equipmnet: ace2fe85-dc69-4e27-babc-8e03cf412e88
+  serviceOrderId: ceb19fd3-477f-49ae-a0e9-4d9312e25fcf
 }

@@ -5,12 +5,15 @@ meta {
 }
 
 get {
-  url: {{apiHost}}/v1/service-orders
+  url: {{apiHost}}/v1/service-orders?serviceTypeStatusId=cb2bb029-5c09-41df-87c9-b39ed2daba61
   body: formUrlEncoded
   auth: inherit
 }
 
 params:query {
+  serviceTypeStatusId: cb2bb029-5c09-41df-87c9-b39ed2daba61
+  ~startDate: 2026-06-13
+  ~endDate: 2026-06-15
   ~search: Mantenimiento
   ~isActive: true
   ~limit: 1
