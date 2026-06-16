@@ -1,0 +1,25 @@
+meta {
+  name: update order
+  type: http
+  seq: 9
+}
+
+put {
+  url: {{apiHost}}/v1/service-templates/:service_template_id/activities/order
+  body: json
+  auth: inherit
+}
+
+params:path {
+  service_template_id: fd21462e-3dd4-40b1-b063-c158e2b5e6f9
+}
+
+body:json {
+  {
+    "activities": [
+      { "id": "8cad78b6-b3b7-41f1-a8fe-815c762600f0", "order": 1 },
+      { "id": "c86dc414-0665-49f9-8cbc-881c23202570", "order": 2 },
+      { "id": "641c23a5-aaa5-4a9b-b5fd-b97969b4c987", "order": 3 }
+    ]
+  }
+}

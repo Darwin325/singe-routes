@@ -11,20 +11,19 @@ put {
 }
 
 params:path {
-  serviceOrderId: 53
+  serviceOrderId: ace616db-3ab3-46b7-8779-c3e700562cb7
 }
 
 body:json {
   {
-    "serviceOrderId": 53,
-    "serviceDate": "2026-12-15",
-    "serviceTime": "10:00",
-    "observation": "Mantenimiento preventivo programado",
-    "isActive": true,
-    "technicians": [
-      { "technicianId": 382, "isResponsible": true },
-      { "technicianId": 383, "isResponsible": false },
-      { "technicianId": 1, "isResponsible": false }
-    ]
+    "serviceOrderId":"ace616db-3ab3-46b7-8779-c3e700562cb7",
+    "serviceDate":"2026-06-05",
+    "serviceTime":"15:24",
+    "serviceEndDate":"2026-06-05",
+    "serviceEndTime":"17:24",
+    "observation":"",
+    "technicians":[{"technicianId":"01e66839-0f28-40c1-aa52-1858da285d37","isResponsible":true}], 
+    "estimatedFinalDate": "2026-06-18", 
+    "estimatedFinalTime": "17:56"
   }
 }
